@@ -32,3 +32,8 @@ Route:: get ('/generos', function(){
 Route:: get ('/actores', function(){
   return "actores importantes";
 });
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/addproduct', 'AdminController@index')->name('addproduct');
+    Route::post('/addproducttodb', 'AdminController@createProduct')->name('addproducttodb');
+});

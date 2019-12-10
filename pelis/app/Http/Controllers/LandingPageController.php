@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Pelicula;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
