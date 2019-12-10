@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/', 'LandingPageController@index')->name('landing-page');
+
+
 Route::get('/titulos', function(){
   return "aca van todas las titulos";
 });
