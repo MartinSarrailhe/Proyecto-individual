@@ -21,19 +21,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'LandingPageController@index')->name('landing-page');
 
+//pelicula
+Route::get('/peliculas', 'PeliculaController@index')->name('peliculas');
+Route::get('/pelicula/{id}', 'PeliculaController@show')->name('pelicula');
+Route::get('/peliculas/{pelicula}', 'PeliculaController@show')->name('pelicula.show');
 
-Route::get('/titulos', function(){
-  return "aca van todas las titulos";
-});
-Route:: get ('/generos', function(){
-  return "generos";
-});
+//carrito
+Route::get('/cart', 'CartController@index')->middleware('auth')->name('cart');
+Route::post('/addtocart', 'CartController@store')->middleware('auth');
+Route::get('/delete/{id}', 'CartController@destroy')->middleware('auth');
+Route::post('/cartclose', 'CartController@cartclose')->middleware('auth');
+Route::get('/thankyou', 'CartController@cartclose')->middleware('auth');
+Route::get('/history', 'CartController@history')->middleware('auth');
 
-Route:: get ('/actores', function(){
-  return "actores importantes";
-});
+Route::get('/pelicula/genero/{name}', 'ProductController@category')->name('genero');
+Route::post('/addpelicula', 'CartController@pelicula')->middleware('auth');
+Route::get('/search', 'PeliculaController@search')->name('search');
+
 
 Route::group(['middleware' => 'admin'], function () {
-    Route::get('/addproduct', 'AdminController@index')->name('addproduct');
-    Route::post('/addproducttodb', 'AdminController@createProduct')->name('addproducttodb');
+    Route::get('/addpelicula', 'AdminController@index')->name('addpelicula');
+    Route::post('/addpeliculadb', 'AdminController@createProduct')->name('addpeliculadb');
 });

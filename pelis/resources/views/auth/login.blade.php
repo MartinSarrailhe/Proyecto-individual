@@ -1,20 +1,38 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <div class="card-body">
+    <title>Ingresar - MaSa</title>
+
+    <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/landing-page.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/register.css')}}">
+
+</head>
+
+{{-- @section('content') --}}
+
+@include('header')
+<div class="container" style="margin-bottom: 50px;">
+    <div class="">
+        <div class="">
+            <div class="">
+                <div class="" style="text-align: center;font-weight: bold;font-size: 30px;text-transform: uppercase;margin: 30px;">{{ __('Ingresar') }}</div>
+
+                <div class="form">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group">
+                            <label for="email" class="">{{ __('Dirección de E-Mail') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -25,10 +43,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="form-group">
+                            <label for="password" class="">{{ __('Contraseña') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -39,27 +57,27 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <div class="form-group">
+                            <div class="">
+                                <div class="">
+                                    <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        Recordarme
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                        <div class="form-group">
+                            <div class="login-register-button">
+                                <button class="login-button" type="submit" class="btn btn-primary">
+                                    Iniciar sesión
                                 </button>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        ¿Olvidaste tu contraseña?
                                     </a>
                                 @endif
                             </div>
@@ -70,4 +88,5 @@
         </div>
     </div>
 </div>
-@endsection
+@include('footer')
+{{-- @endsection --}}

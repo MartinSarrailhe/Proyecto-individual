@@ -1,0 +1,112 @@
+.pelicula-container{
+  display: flex;
+}
+.generos{
+  margin-left: 3vw;
+  padding-top: 5vh;
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+li.generos-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a.genero-link{
+  color: black;
+  font-size: 16px;
+}
+
+div.conteiner{
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+  width: 100%;
+}
+
+img.pelicula-img{
+  border: 1px solid grey;
+  width: 25vw;
+  margin-left: 5vw;
+}
+
+div.pelicula-info{
+  width: 40vw;
+  margin-left: 5vw;
+}
+
+h1.pelicula-name{
+  font-weight: bold;
+}
+h2.pelicula-price{
+  font-weight: bold;
+  font-size: 7vh;
+}
+button.button-add-to-cart{
+  width: 50%;
+}
+
+h2.might-like-title{
+  margin-left: 5vw;
+}
+div.might-also-like{
+  display: block;
+  background-color: #f2f2f2;
+  margin-bottom: 10vh;
+}
+div.might-like-grid{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.might-also-like-pelicula{
+  width: 21%;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+a.might-like-pelicula{
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img.might-like-img{
+  width: 80%;
+}
+div.might-like-pelicula-name{
+  align-items: center;
+}
+div.might-like-pelicula-price{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+  div.conteiner{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+  h1.pelicula-name{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  h2.peliucla-price{
+    font-size: 2.25em;
+    text-align: center;
+  }
+  p.pelicula-detail{
+    display: none;
+  }
+  button.button-add-to-cart{
+    width: 100%;
+  }
+}

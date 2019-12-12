@@ -1,0 +1,70 @@
+.peliculas-container{
+  display: flex;
+}
+.generos{
+  margin-left: 3vw;
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+}
+h2.generos-title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+a.genero-link{
+  color: black;
+  font-size: 16px;
+}
+
+div.peliculas{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.peliculas{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+span.pelicula-name{
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+  div.peliculas-container{
+    display: block;
+  }
+  div.generos{
+    margin-left: 0;
+  }
+  h2.generos-title{
+    text-align: center;
+  }
+  ul.listagenero{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  li.nombresgeneros{
+    width: 30%;
+  }
+
+  div.pagination.pagination-sm{
+    width: 100%;
+  }
+  ul.pagination{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    flex-wrap: nowrap;
+  }
+}
