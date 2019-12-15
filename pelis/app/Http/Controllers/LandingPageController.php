@@ -14,9 +14,9 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $films = Product::inRandomOrder()->take(8)->get();
+        $pelicula = Pelicula::inRandomOrder()->take(8)->get();
 
-        return view('landing-page')->with('movie', $films);
+        return view('landing-page')->with('peliculas', $pelculas);
     }
 
     /**

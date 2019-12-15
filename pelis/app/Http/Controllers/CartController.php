@@ -49,6 +49,7 @@ class CartController extends Controller
       $item->name = $pelicula->name;
       $item->description = $pelicula->description;
       $item->price = $pelicula->price;
+      $item->rating = $pelicula->rating;
       $item->featured_img = $pelicula->featured_img;
       $item->quantity = 1;
       $item->user_id = Auth::user()->id;
@@ -65,13 +66,14 @@ class CartController extends Controller
       $item->name = $pelicula->name;
       $item->description = $pelicula->description;
       $item->price = $pelicula->price;
+      $item->rating = $pelicula->rating;
       $item->featured_img = $pelicula->featured_img;
       $item->quantity = 1;
       $item->user_id = Auth::user()->id;
       $item->status = 0; //producto no comprado.
       $item->cart_number = 0;
       $item->save();
-      return redirect('/buildpc/'.($pelicula->generos_id+1));
+      return redirect('/promo/'.($pelicula->generos_id+1));
     }
 
     /**

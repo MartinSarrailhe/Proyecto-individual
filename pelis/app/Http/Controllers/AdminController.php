@@ -26,7 +26,8 @@ class AdminController extends Controller
 
         $pelicula->name = $request->input('name');
         $pelicula->description = $request->input('description');
-        $pelicula->price = $request->input('price');
+        $product->price = $request->input('price');
+        $pelicula->rating = $request->rating('rating');
         $pelicula->genero_id = $request->input('genero_id');
         $pelicula->featured_img = $name;
         $pelicula->save();

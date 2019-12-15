@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Genero;
+use App\Generos;
 use App\Pelicula;
 use Illuminate\Http\Request;
 
@@ -15,12 +15,12 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-      $movie = Pelicula::orderBy('name')->paginate(16);
+      $pelicula = Pelicula::orderBy('name')->paginate(16);
       $generos = Genero::all();
 
       return view('products')->with([
         'generos'=> $generos,
-        'pelicula' => $movie,
+        'pelicula' => $pelicula,
       ]);
     }
 
@@ -152,7 +152,7 @@ class PeliculaController extends Controller
      * @param  \App\Pelicula  $pelicula
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $pelicula)
+    public function destroy(Pelicula $pelicula)
     {
         //
     }
