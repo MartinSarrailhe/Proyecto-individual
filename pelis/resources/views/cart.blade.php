@@ -30,7 +30,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Producto</th>
+              <th scope="col">Pelicula</th>
               <th scope="col">Precio</th>
               <th scope="col"></th>
             </tr>

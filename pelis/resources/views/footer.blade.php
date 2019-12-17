@@ -16,14 +16,4 @@
         <li><a class="general-info" href="#"><b>Sugerencias</b></a></li>
       </ul>
     </div>
-    <div class="redes">
-      <ul class="social-network">
-        <li class="top">Seguinos en nuestras redes</li>
-        <div class="redesociales">
-          <li><a href="#"><i class="fab fa-facebook-square fa-4x" style="color:#FFFFFF; width: 33%;" ></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram fa-4x" style="color:#FFFFFF; width: 33%;"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter-square fa-4x" style="color:#FFFFFF; width: 33%;"></i></a></li>
-        </div>
-      </ul>
-    </div>
 </footer>

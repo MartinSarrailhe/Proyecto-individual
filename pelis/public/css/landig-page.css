@@ -128,17 +128,14 @@ button {
   border-radius: 5px;
 }
 
-button.more-products-button a{
+button.more-peliculas-button a{
   text-decoration: none;
   color: black;
   display: block;
   width: 100%;
 }
 
-.banner-nvidia{
-  height: auto;
-  width: 100%;
-}
+
 
 div.img-button{
   position: relative;
@@ -161,11 +158,11 @@ button#anterior, #siguiente{
   z-index: 0;
 }
 
-div.popular-products{
+div.popular-peliculas{
   margin-top: 3vh;
 }
 
-h3.popular-products{
+h3.popular-peliculas{
   text-transform: uppercase;
   background-color: gainsboro;
 }
@@ -175,7 +172,7 @@ section.populars-section{
   flex-wrap: wrap;
 }
 
-article.products{
+article.peliculas{
   width: 40%;
   display: flex;
   background-color: white;
@@ -184,25 +181,25 @@ article.products{
   justify-content: space-around;
 }
 
-article.products:hover{
+article.peliculas:hover{
   border: solid 1px #9EA49D;
 }
 
-img.product-image{
+img.peliculas-image{
   height: auto;
   max-width: 80%;
 }
 
-a.name-product{
+a.name-pelicula{
   text-decoration: none;
 }
 
-span.product-name{
+span.pelicula-name{
   font-size: 17px;
   color: black;
 }
 
-div.product-price{
+div.pelicula-price{
   font-weight: bold;
   font-size: 20px;
 }
@@ -272,7 +269,7 @@ div.redesociales{
 
 }
 
-.productomiscompras{
+.peliculamiscompras{
   font-size: 1.5em;
 
 }
@@ -315,9 +312,7 @@ address, dl, ol, ul{
     width: 60%;
   }
 
-  .armatupcimg{
-    width: 40%;
-  }
+
 
   div.seach-box{
     padding-bottom: 0;
@@ -333,9 +328,7 @@ address, dl, ol, ul{
     padding-bottom: 0;
   }
 
-  .armatupcimg{
-    width: 60%;
-  }
+
 
   .bienvenido{
     display: none;
@@ -384,7 +377,7 @@ address, dl, ol, ul{
 
 
 @media screen and (min-width: 768px) and (max-width: 2560px){
-  article.products {
+  article.peliculas {
     width: 21%;
     float: left;
     display: grid;

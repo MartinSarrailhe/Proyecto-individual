@@ -21,7 +21,7 @@
       @include('header')
       @include('search-bar')
 
-      <div class="products-container">
+      <div class="peliculas-container">
         {{-- <div class="categories">
           <ul>
             <li class="categories-title">Categorías</li>
@@ -31,11 +31,11 @@
           </ul>
         </div> --}}
         <div class="conteiner">
-          <div class=""> <img class="product-img" src="/img/{{ $pelicula->featured_img }}" alt=""> </div>
-          <div class="product-info">
-            <h1 class="product-name">{{ $pelicula->name }}</h1>
-            <h2 class="product-price">${{ $pelicula->price }}</h2>
-            <p class="product-detail">{{ $pelicula->description }}</p>
+          <div class=""> <img class="pelicula-img" src="/img/{{ $pelicula->featured_img }}" alt=""> </div>
+          <div class="pelicula-info">
+            <h1 class="pelicula-name">{{ $pelicula->name }}</h1>
+            <h2 class="pelicula-price">${{ $pelicula->price }}</h2>
+            <p class="pelicula-detail">{{ $pelicula->description }}</p>
               <form class="" action="/addtocart" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$pelicula->id}}">

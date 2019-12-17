@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Cotrollers extends Migration
+class CreateGenerosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,11 @@ class Cotrollers extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('generos', function (Blueprint $table) {
+          $table->bigIncrements('id');
+          $table->string('genero', 100);
+          $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class Cotrollers extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('generos');
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>LUGAMA</title>
+        <title>MaSa</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -58,37 +58,29 @@
                     <label for="generos_id" class="">{{ __('Generos de peliculas') }}:</label>
 
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="9" style="width:1em;height:1em;"> Auriculares
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="9" style="width:1em;height:1em;"> Aventura
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="4" style="width:1em;height:1em;"> Gabinetes
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="4" style="width:1em;height:1em;"> Accion
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="3" style="width:1em;height:1em;"> Memorias RAM
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="3" style="width:1em;height:1em;"> Comedia
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="6" style="width:1em;height:1em;"> Monitores
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="6" style="width:1em;height:1em;"> Infantil
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="1" style="width:1em;height:1em;"> Motherboards
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="1" style="width:1em;height:1em;"> Ciencia ficcion
                     </div>
                     <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="7" style="width:1em;height:1em;"> Mouses
+                        <input id="genero_id" type="radio" class="form-control" name="genero_id" value="7" style="width:1em;height:1em;"> Terror
                     </div>
-                    <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="5" style="width:1em;height:1em;"> Placas de video
-                    </div>
-                    <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="2" style="width:1em;height:1em;"> Procesadores
-                    </div>
-                    <div class="" style="display:flex;align-items:center;">
-                        <input id="generos_id" type="radio" class="form-control" name="generos_id" value="8" style="width:1em;height:1em;"> Teclados
-                    </div>
+
 
                 </div>
 
                 <div class="form-group">
-                    <label for="featured_img" class="">{{ __('Imagen del producto') }}</label>
+                    <label for="featured_img" class="">{{ __('Imagen del pelicula') }}</label>
 
                     <div class="">
                         <input id="featured_img" type="file" name="featured_img" placeholder="">

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Productos - LUGAMA</title>
+        <title>Productos - MaSa</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -22,10 +22,10 @@
 
       @include('search-bar')
 
-      <div class="products-container">
+      <div class="peliculas-container">
         <div class="generos">
           <h2 class="generos-title">Generos</h2>
-          <ul class="listacategoria">
+          <ul class="listagenero">
             @foreach ($generos as $genero)
               <li class="nombresgeneros"> <a class="genero-link" href="{{route('generos', $generos->id)}}"> {{ $generos->name }} </a> </li>
             @endforeach
@@ -44,7 +44,7 @@
           @endforelse
 
             <div class="pagination pagination-sm">
-              {{ $products->links() }}
+              {{ $peliculass->links() }}
             </div>
 
 
