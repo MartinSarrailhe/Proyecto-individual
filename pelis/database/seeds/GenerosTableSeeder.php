@@ -17,6 +17,7 @@ class GenerosTableSeeder extends Seeder
         ['genero'=>'comedia'],
         ['genero'=>'infantil'],
         ['genero'=>'ciencia ficcion'],
+        ['genero'=>'terror']
       )];
     }
 }
