@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Genero extends Model
+class Generos extends Model
 {
   public function peliculas(){
-    return $this->hasMany('App\Pelicula', 'generos_id');
+    return $this->hasMany('App\Peliculas', 'generos_id');
   }
 }

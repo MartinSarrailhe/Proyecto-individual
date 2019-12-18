@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
-use App\Pelicula;
+use App\Peliculas;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -44,7 +44,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-      $pelicula = Pelicula::find($request->id);
+      $pelicula = Peliculas::find($request->id);
       $item = new Cart;
       $item->name = $pelicula->name;
       $item->description = $pelicula->description;
@@ -61,7 +61,7 @@ class CartController extends Controller
 
     public function pelicula(Request $request)
     {
-      $pelicula = Pelicula::find($request->id);
+      $pelicula = Peliculas::find($request->id);
       $item = new Cart;
       $item->name = $pelicula->name;
       $item->description = $pelicula->description;
@@ -70,7 +70,7 @@ class CartController extends Controller
       $item->featured_img = $pelicula->featured_img;
       $item->quantity = 1;
       $item->user_id = Auth::user()->id;
-      $item->status = 0; //producto no comprado.
+      $item->status = 0; //pelicula no alquilada.
       $item->cart_number = 0;
       $item->save();
       return redirect('/promo/'.($pelicula->generos_id+1));
@@ -120,8 +120,8 @@ class CartController extends Controller
     {
       $item = Cart::where('id',$id)
       ->where('user_id',Auth::user()->id)
-      ->where('status',0)->get(); //La consulta nos devuelve un array de datos con 1 solo item.
-      $item[0]->delete(); //El item está en la posición 0 del array. Lo eliminamos.
+      ->where('status',0)->get();
+      $item[0]->delete();
       return redirect('/cart');
     }
 
@@ -141,7 +141,7 @@ class CartController extends Controller
     public function history(){
       $carts = Cart::where('user_id', Auth::user()->id)
                     ->where("status",1)->get()
-                    ->groupBy('cart_number'); //todos los nros de carrito del usuario.
+                    ->groupBy('cart_number');
       return view('history', compact('carts'));
     }
 

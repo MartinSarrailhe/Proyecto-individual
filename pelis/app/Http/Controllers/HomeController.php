@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Pelicula;
+use App\Peliculas;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         // return view('home');
-        $peliculas = Pelicula::inRandomOrder()->take(8)->get();
+        $peliculas = Peliculas::inRandomOrder()->take(8)->get();
 
         return view('home')->with('pelicula', $peliculas);
     }

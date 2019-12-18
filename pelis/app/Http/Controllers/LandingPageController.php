@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Pelicula;
+use App\Peliculas;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -14,7 +14,7 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $pelicula = Pelicula::inRandomOrder()->take(8)->get();
+        $pelicula = Peliculas::inRandomOrder()->take(8)->get();
 
         return view('landing-page')->with('peliculas', $pelculas);
     }

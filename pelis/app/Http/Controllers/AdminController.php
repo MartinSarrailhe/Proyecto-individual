@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use App\Pelicula;
+use App\Peliculas;
 use App\Generos;
 use Illuminate\Http\Request;
 
@@ -22,11 +22,11 @@ class AdminController extends Controller
           $file->move(public_path().'/img/', $name);
         }
       // dd($request);
-        $pelicula = new Pelicula;
+        $pelicula = new Peliculas;
 
         $pelicula->name = $request->input('name');
         $pelicula->description = $request->input('description');
-        $product->price = $request->input('price');
+        $pelicula->price = $request->input('price');
         $pelicula->rating = $request->rating('rating');
         $pelicula->genero_id = $request->input('genero_id');
         $pelicula->featured_img = $name;

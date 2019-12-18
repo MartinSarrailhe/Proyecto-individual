@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Generos;
-use App\Pelicula;
+use App\Peliculas;
 use Illuminate\Http\Request;
 
 class PeliculaController extends Controller
@@ -15,8 +15,8 @@ class PeliculaController extends Controller
      */
     public function index()
     {
-      $pelicula = Pelicula::orderBy('name')->paginate(16);
-      $generos = Genero::all();
+      $pelicula = Peliculas::orderBy('name')->paginate(16);
+      $generos = Generos::all();
 
       return view('products')->with([
         'generos'=> $generos,
@@ -33,9 +33,9 @@ class PeliculaController extends Controller
      public function genero($id)
      {
 
-       $pelicula = pelicula::where('generos_id', $id)->paginate(16);
-       $generos = Genero::all();
-       $genero = Genero::find($id);
+       $pelicula = peliculas::where('generos_id', $id)->paginate(16);
+       $generos = Generos::all();
+       $genero = Generos::find($id);
 
        return view('generos')->with([
          'generos' => $generos,
@@ -64,13 +64,13 @@ class PeliculaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Pelicula  $pelicula
+     * @param  \App\Peliculas  $pelicula
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $pelicula = Pelicula::find($id);
-        $mightAlsoLike = Pelicula::where('id', '!=', $id)->inRandomOrder()->take(4)->get();
+        $pelicula = Peliculas::find($id);
+        $mightAlsoLike = Peliculas::where('id', '!=', $id)->inRandomOrder()->take(4)->get();
 
         return view('titulos')->with([
           'pelicula' => $pelicula,
@@ -83,8 +83,8 @@ class PeliculaController extends Controller
     {
       $query = $request->input('query');
 
-      $pelicula = Pelicula::where('name', 'like', "%$query%")->get();
-      $genero = Genero::where('name', 'like', "%$query%")->get();
+      $pelicula = Peliculas::where('name', 'like', "%$query%")->get();
+      $genero = Generos::where('name', 'like', "%$query%")->get();
 
       return view('search-results')->with([
         'pelicula' => $pelicula,
@@ -94,7 +94,7 @@ class PeliculaController extends Controller
 
     public function accion(){
 
-      $pelicula = Pelicula::where('category_id', 5)->get();
+      $pelicula = Peliculas::where('generos_id', 5)->get();
 
       return view('accion')->with([
         'pelicula' => $pelicula,
@@ -104,7 +104,7 @@ class PeliculaController extends Controller
 
     public function aventura(){
 
-      $pelicula = Pelicula::where('category_id', 8)->get();
+      $pelicula = Pelicula::where('generos_id', 8)->get();
 
       return view('aventura')->with([
         'pelicula' => $pelicula,
@@ -114,10 +114,10 @@ class PeliculaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Pelicula  $pelicula
+     * @param  \App\Peliculas  $pelicula
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(pelicula $pelicula)
     {
         //
     }
@@ -126,7 +126,7 @@ class PeliculaController extends Controller
     {
       $pelicula = pelicula::where('generos_id', $id)->get();
       $generos = Generos::all();
-      $genero = Genero::find($id);
+      $genero = Generos::find($id);
       return view('buildpc')->with([
         'pelicula' => $pelicula,
         'generos' => $generos,
@@ -138,10 +138,10 @@ class PeliculaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Pelicula  $pelicula
+     * @param  \App\Peliculas  $pelicula
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $pelicula)
+    public function update(Request $request, Pelicula $pelicula)
     {
         //
     }
@@ -149,7 +149,7 @@ class PeliculaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Pelicula  $pelicula
+     * @param  \App\Peliculas  $pelicula
      * @return \Illuminate\Http\Response
      */
     public function destroy(Pelicula $pelicula)
