@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{$product->name}} - Entrega</title>
+        <title>{{$titulo->name}} - Entrega</title>
 
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
           <div class="titulo-info">
             <h1 class="titulo-name">{{ $titulo->name }}</h1>
             <h2 class="titulo-rating">${{ $titulo->rating }}</h2>
-            <p class="titulo-detail">{{ $product->description }}</p>
+            <p class="titulo-detail">{{ $titulo->description }}</p>
               <form class="" action="/addtocart" method="post">
                 @csrf
                 <input type="hidden" name="id" value="{{$titulo->id}}">
