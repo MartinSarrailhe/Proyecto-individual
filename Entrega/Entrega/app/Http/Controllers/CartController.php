@@ -1,6 +1,6 @@
 <?php
 
-namespace Final\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Titulo;
@@ -58,10 +58,10 @@ class CartController extends Controller
       return redirect('/cart');
     }
 
-
+    /**
      * Display the specified resource.
      *
-     * @param  \Final\Cart  $cart
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
     public function show(Cart $cart)
@@ -72,7 +72,7 @@ class CartController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \Final\Cart  $cart
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
     public function edit(Cart $cart)
@@ -95,7 +95,7 @@ class CartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \Final\Cart  $cart
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

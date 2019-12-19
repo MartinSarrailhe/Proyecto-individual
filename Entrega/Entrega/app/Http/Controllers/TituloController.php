@@ -38,7 +38,7 @@ class ProductController extends Controller
        $genre = Genres::find($id);
 
        return view('genre')->with([
-         'genres' => $genres
+         'genres' => $genres,
          'genre' => $genre,
          'titulos' => $titulos,
        ]);
