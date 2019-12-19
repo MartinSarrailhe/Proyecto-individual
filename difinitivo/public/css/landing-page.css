@@ -1,0 +1,400 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+/* Variables */
+@import 'variables';
+
+/* Bootstrap */
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+
+}
+
+header {
+  /* background: url('/img/banners/abstract-technology-banner-template-vector.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+div.space{
+  height: 24vh;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 15vh;
+  align-items: center;
+}
+
+img.logo {
+  height: 11vh;
+  width: auto;
+}
+
+.logoContainer a{
+  text-decoration: none;
+  color: white;
+  font-size: 10vh;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #26901C;
+}
+
+.menu {
+  display: none;
+}
+
+.menu div{
+  width: 25px;
+  height: 5px;
+  margin: 2px;
+  background-color: black;
+}
+
+
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin-bottom: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+.login-register{
+  display: flex;
+  width: 65%;
+  justify-content: flex-end;
+}
+
+.login-register a{
+  margin-left: 20px;
+  color: black;
+  font-weight: bold;
+  padding-right: 2px;
+}
+
+div.nav-container a i {
+  margin-right: 3vw;
+  color: black;
+}
+
+div.seach-box{
+  display: flex;
+  justify-content: center;
+}
+
+input.search-input{
+  width: 80%;
+  border-radius: 10px;
+  padding-left: 15px;
+  background-color: gainsboro;
+  height: 5vh;
+}
+
+button {
+  width: 15%;
+  margin-left: 2px;
+  border-radius: 5px;
+}
+
+button.more-peliculas-button a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+}
+
+.banner-nvidia{
+  height: auto;
+  width: 100%;
+}
+
+div.img-button{
+  position: relative;
+}
+button#anterior{
+  left: 0;
+}
+button#siguiente{
+  right: 0;
+}
+button#anterior, #siguiente{
+  background-color: transparent;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  position: absolute;
+  width: 2%;
+  top: 45%;
+  z-index: 0;
+}
+
+div.popular-pelicula{
+  margin-top: 3vh;
+}
+
+h3.popular-pelicula{
+  text-transform: uppercase;
+  background-color: gainsboro;
+}
+
+section.populars-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.pelicula{
+  width: 40%;
+  display: flex;
+  background-color: white;
+  margin: 5%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+article.peliculas:hover{
+  border: solid 1px #9EA49D;
+}
+
+img.pelicula-image{
+  height: auto;
+  max-width: 80%;
+}
+
+a.name-pelicula{
+  text-decoration: none;
+}
+
+span.pelicula-name{
+  font-size: 17px;
+  color: black;
+}
+
+div.pelicula-price{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+button.more-peliculas-button {
+  width: 33%;
+  margin: 40px;
+  border-color: #26901C;
+  text-transform: uppercase;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #565656;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+  color: #f0f0f0;
+}
+
+div.information, div.faqs, div.redes{
+  width: 30%;
+}
+
+ul.social-network{
+  list-style: none;
+}
+
+li.top {
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: solid 1px #26901C;
+}
+
+a.general-info {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+div.redesociales{
+  display: flex;
+  justify-content: space-around;
+}
+
+.armatupcimg{
+  width: 35%;
+  padding-top: 15px;
+  display:block;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+}
+
+.mother{
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+  width: 100%;
+  border-bottom-style: solid;
+}
+
+.miscompras{
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 20px;
+
+}
+
+.carritonum{
+
+  font-size: 2em;
+  border-bottom: green solid 1px;
+
+}
+
+.peliculaomiscompras{
+  font-size: 1.5em;
+
+}
+
+.mothersubmit{
+
+  width: 80%;
+  margin: 0 auto;
+}
+.omitir{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.omitirfinal{
+
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+}
+
+.omitirtexto{
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+address, dl, ol, ul{
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .nav-links{
+    width: 60%;
+  }
+
+  .armatupcimg{
+    width: 40%;
+  }
+
+  div.seach-box{
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  a.logo-letras{
+    display: none;
+  }
+
+  div.seach-box{
+    padding-bottom: 0;
+  }
+
+  .armatupcimg{
+    width: 60%;
+  }
+
+  .bienvenido{
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 23vh;
+    height: 77vh;
+    background-color: #26901C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+  }
+  /* ul.nav-links li a:focus{
+    background-color: black;
+  } */
+  footer {
+    display: block;
+    background-color: #565656;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+    color: #f0f0f0;
+  }
+  div.information, div.faqs, div.redes{
+    width: 100%;
+  }
+  ul.nav-links li a.burguer-links{
+    font-size: 1em;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 2560px){
+  article.pelicula {
+    width: 21%;
+    float: left;
+    display: grid;
+    background-color: white;
+    margin: 2%;
+  }
+}
